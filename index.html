@@ -17,27 +17,28 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
+            <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <a class="navbar-brand mr-auto" href="/"><img src="img/logo.png" alt="logo" height="30" width="41"></a>
         </div>
         <div class="collapse navbar-collapse" id="Navbar">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active"><a class="nav-link" href="/"><span class="fa fa-home fa-lg"></span>Home</a>
+                <li class="nav-item active"><a class="nav-link" href="/"><span
+                            class="mr-2 fa fa-home fa-lg"></span>Home</a>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="/aboutus.html"><span
-                            class="fa fa-info fa-lg"></span>About</a></li>
+                            class="fa fa-info fa-lg mr-2"></span>About</a></li>
                 <li class="nav-item"><a class="nav-link" href="/menu.html"><span
-                            class="fa fa-list fa-lg"></span>Menu</a></li>
+                            class="fa fa-list fa-lg mr-2"></span>Menu</a></li>
                 <li class="nav-item"><a class="nav-link" href="/contactus.html"><span
-                            class="fa fa-address-card fa-lg"></span>Contact</a></li>
+                            class="fa fa-address-card fa-lg mr-2"></span>Contact</a></li>
             </ul>
             <span class="navbar-text">
                 <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
+                    <span class="fa fa-sign-in mr-2"></span>Login</a>
             </span>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
     </nav>
 
     <div id="loginModal" class="modal fade" role="dialog">
@@ -88,11 +89,17 @@
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our
                         lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
-                    <img src="img/logo.png" alt="logo" class="img-fluid">
-                    <a href="#reserveform" role="button" class="btn btn-block nav-link btn-warning"
-                        data-toggle="tooltip" data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>"
-                        data-placement="bottom">Reserve Table</a>
+                <div class="col-12 col-sm-6 align-self-center row align-items-center">
+                    <div class="col">
+                        <img src="img/logo.png" alt="logo" class="img-fluid">
+
+                    </div>
+                    <div class="col-12 col-sm mt-3">
+                        <a href="#reserveForm" role="button" class="btn btn-sm btn-block nav-link btn-warning"
+                            data-toggle="tooltip" data-html="true"
+                            title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom">Reserve
+                            Table</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -107,7 +114,7 @@
                 <div class="media">
                     <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="Uthappizza">
                     <div class="media-body">
-                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span><span
+                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger mr-2">HOT</span><span
                                 class="badge badge-pill badge-secondary">$4.99</span></h2>
                         <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
                             Italian pizza, topped with Cerignola olives, ripe vine
@@ -123,12 +130,20 @@
                 <h3>This Month's Promotions</h3>
             </div>
             <div class="col">
-                <h2>Weekend Grand Buffet</h2>
-                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different
-                    salads, six enticing
-                    appetizers,
-                    six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just
-                    $19.99 per person </p>
+                <div class="media">
+                    <img src="img/buffet.png" alt="Buffet" class="ml-3 order-last img-thumbnail align-self-center">
+                    <div class="media-body">
+                        <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five
+                            different
+                            salads, six enticing
+                            appetizers,
+                            six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for
+                            just
+                            $19.99 per person </p>
+
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -152,48 +167,106 @@
                 </div>
             </div>
         </div>
+        <div class="row row-content justify-content-center">
+            <div class="col col-sm-8">
+                <form action="" class="card" id="reserveForm">
+                    <div class="card-header bg-warning">
+                        <h3 class="text-white">Reserve a Table</h3>
+                    </div>
+                    <div class="card-body p-5">
+                        <div class="form-group row">
+                            <label for="numberOfGuests" class="col-12 col-sm-3 p-0">Number of Guests</label>
+                            <div class="form-check form-check-inline ml-sm-3">
+                                <input type="radio" name="numberOfGuests" id="1guest" class="form-check-input"
+                                    value="1">
+                                <label for="1guest" class="form-check-label">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="numberOfGuests" id="2guest" class="form-check-input"
+                                    value="2">
+                                <label for="2guest" class="form-check-label">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="numberOfGuests" id="3guest" class="form-check-input"
+                                    value="3">
+                                <label for="3guest" class="form-check-label">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="numberOfGuests" id="4guest" class="form-check-input"
+                                    value="4">
+                                <label for="4guest" class="form-check-label">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="numberOfGuests" id="5guest" class="form-check-input"
+                                    value="5">
+                                <label for="5guest" class="form-check-label">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="numberOfGuests" id="6guest" class="form-check-input"
+                                    value="6">
+                                <label for="6guest" class="form-check-label">6</label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="date" class="col-12 col-sm-3 p-0">Date and Time</label>
+                            <input class="col-12 col-sm-4 form-control ml-sm-3" type="text" name="date" id="date"
+                                placeholder="Date" onfocus="this.type='date'" onblur="this.type='text'">
+                            <input class="col-12 col-sm-4 form-control ml-sm-3" type="text" name="time" id="date"
+                                placeholder="Time" onfocus="this.type='time'" onblur="this.type='text'">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-0 col-sm-3"></label>
+                            <button type="submit" class="btn btn-primary ml-sm-3">Reserve</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
-    <footer class="container footer">
-        <div class="row">
-            <div class="col-4 col-sm-2">
-                <h5>Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-7 col-sm-5">
-                <h5>Our Address</h5>
-                <address>
-                    121, Clear Water Bay Road<br>
-                    Clear Water Bay, Kowloon<br>
-                    HONG KONG<br>
-                    <i class="fa fa-phone fa-lg"></i>Tel.: +852 1234 5678<br>
-                    <i class="fa fa-fax fa-lg"></i>Fax: +852 8765 4321<br>
-                    <i class="fa fa-envelope fa-lg"></i>Email: <a
-                        href="mailto:confusion@food.net">confusion@food.net</a>
-                </address>
-            </div>
-            <div class="col-12 col-sm-4 align-self-center">
-                <div class="text-center">
-                    <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i
-                            class="fa fa-google-plus"></i></a>
-                    <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i
-                            class="fa fa-facebook"></i></a>
-                    <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
-                            class="fa fa-linkedin"></i></a>
-                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
-                            class="fa fa-twitter"></i></a>
-                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
-                            class="fa fa-youtube"></i></a>
-                    <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/aboutus.html">About</a></li>
+                        <li><a href="/">Menu</a></li>
+                        <li><a href="/contactus.html">Contact</a></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="col-auto">
-                <p>© Copyright 2018 Ristorante Con Fusion</p>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+                        121, Clear Water Bay Road<br>
+                        Clear Water Bay, Kowloon<br>
+                        HONG KONG<br>
+                        <i class="fa fa-phone fa-lg mr-2"></i>Tel.: +852 1234 5678<br>
+                        <i class="fa fa-fax fa-lg mr-2"></i>Fax: +852 8765 4321<br>
+                        <i class="fa fa-envelope fa-lg mr-2"></i>Email: <a
+                            href="mailto:confusion@food.net">confusion@food.net</a>
+                    </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i
+                                class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i
+                                class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                                class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
+                                class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon btn-light" href="mailto:confusion@food.net"><i
+                                class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+                <div class="col-auto mx-auto mt-3">
+                    <p>© Copyright 2018 Ristorante Con Fusion</p>
+                </div>
             </div>
         </div>
     </footer>
