@@ -3,9 +3,10 @@ import { players } from "../shared/ListOfPlayers"
 import Grid from '@mui/material/Unstable_Grid2'
 import { MoreVertRounded } from "@mui/icons-material"
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Players() {
-    const [openingPlayer, setOpeningPlayer] = useState(undefined);
+    // const [openingPlayer, setOpeningPlayer] = useState(undefined);
 
     return (
         <Grid container spacing={2}>
@@ -28,7 +29,7 @@ export default function Players() {
                             </Stack>
                         </CardContent>
                         <CardActions>
-                            <Button size="small" onClick={() => setOpeningPlayer(player)}>Detail</Button>
+                            <Button size="small" component={Link} to={`/detail/${player.id}`}>Detail</Button>
                         </CardActions>
                     </Card>
                 </Grid>
@@ -36,7 +37,7 @@ export default function Players() {
             }
 
             {/* Modal for displaying details of selected player */}
-            <Modal
+            {/* <Modal
                 open={openingPlayer}
                 onClose={() => setOpeningPlayer(undefined)}
                 aria-labelledby="modal-modal-title"
@@ -72,7 +73,7 @@ export default function Players() {
                         </Card>
                     ) : ""}
                 </Box>
-            </Modal>
+            </Modal> */}
         </Grid >
     )
 }
