@@ -19,7 +19,7 @@ export default function HomePage() {
                     </Button>
                 </Box>
             </Stack>
-            <Grid container spacing={4} mt={"30vh"} id="FilmList">
+            <Grid container spacing={4} mt={"30vh"} pb={"64px"} id="FilmList">
                 {Films.map(film => (
                     <Grid xs={12} sm={6} md={4} sx={{
                         transition: 'all 300ms ease-in-out',

@@ -1,20 +1,9 @@
-import React from 'react';
-import NavBar from './components/NavBar';
 import { Box } from '@mui/material';
-import HomePage from './pages/HomePage';
-import { createBrowserRouter, Route, RouterProvider, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import Footer from './components/Footer';
+import NavBar from './components/NavBar';
 import FilmDetailPage from './pages/FilmDetailPage';
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <HomePage />
-  },
-  {
-    path: "/details/:id",
-    element: <FilmDetailPage />
-  },
-])
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
@@ -24,6 +13,7 @@ function App() {
         <Route path='/' element={<HomePage />} />
         <Route path='/details/:id' element={<FilmDetailPage />} />
       </Routes>
+      <Footer />
     </Box>
   );
 }
