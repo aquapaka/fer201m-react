@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './components/NavBar';
+import { Box } from '@mui/material';
+import HomePage from './pages/HomePage';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import FilmDetailPage from './pages/FilmDetailPage';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />
+  },
+  {
+    path: "/details/:id",
+    element: <FilmDetailPage />
+  },
+])
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box className="App" sx={{ color: "white", bgcolor: "#1A1A1D", minHeight: "100vh" }}>
+      <NavBar />
+      <RouterProvider router={router} />
+    </Box>
   );
 }
 
