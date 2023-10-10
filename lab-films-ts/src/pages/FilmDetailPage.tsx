@@ -1,13 +1,13 @@
 import { CardMedia, Container, Grid, Typography } from "@mui/material";
 import { useParams } from 'react-router-dom';
-import { Films } from "../shared/ListOfFilms";
+import useFilm from "../utils/useFilm";
 
 export default function FilmDetailPage() {
     const { id } = useParams();
-    const film = Films.find(film => film.id === Number(id));
+    const film = useFilm(id);
 
     return (
-        <Container>
+        <Container sx={{ minHeight: '90vh' }}>
             {film && (
                 <Grid container pt={"10vh"}>
                     <Grid xs={12} sm={4}>
