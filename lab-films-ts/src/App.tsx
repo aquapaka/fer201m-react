@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from './components/NavBar';
 import { Box } from '@mui/material';
 import HomePage from './pages/HomePage';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Route, RouterProvider, Routes } from 'react-router-dom';
 import FilmDetailPage from './pages/FilmDetailPage';
 
 const router = createBrowserRouter([
@@ -20,7 +20,10 @@ function App() {
   return (
     <Box className="App" sx={{ color: "white", bgcolor: "#1A1A1D", minHeight: "100vh" }}>
       <NavBar />
-      <RouterProvider router={router} />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/details/:id' element={<FilmDetailPage />} />
+      </Routes>
     </Box>
   );
 }

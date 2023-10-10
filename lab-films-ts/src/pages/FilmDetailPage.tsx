@@ -1,7 +1,6 @@
-import { Box, CardMedia, Container, Grid, Typography } from "@mui/material"
-import FilmCard from "../components/FilmCard"
+import { CardMedia, Container, Grid, Typography } from "@mui/material";
+import { useParams } from 'react-router-dom';
 import { Films } from "../shared/ListOfFilms";
-import { useParams } from 'react-router-dom'
 
 export default function FilmDetailPage() {
     const { id } = useParams();
@@ -10,11 +9,11 @@ export default function FilmDetailPage() {
     return (
         <Container>
             {film && (
-                <Grid container pt={"180px"}>
+                <Grid container pt={"10vh"}>
                     <Grid xs={12} sm={4}>
                         <CardMedia component={"img"} image={film.image} alt={film.title} />
                     </Grid>
-                    <Grid xs={12} sm={8} pl={"32px"}>
+                    <Grid xs={12} sm={8} sx={{ mt: { xs: '16px', sm: '0' }, pl: { sm: '32px' } }}>
                         <Typography variant="h4">
                             {film.title} ({film.year})
                         </Typography>
@@ -26,7 +25,8 @@ export default function FilmDetailPage() {
                         </Typography>
                     </Grid>
                 </Grid>
-            )}
-        </Container>
+            )
+            }
+        </Container >
     )
 }
