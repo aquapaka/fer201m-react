@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 import FilmDetailPage from './pages/FilmDetailPage';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
+import NewsPage from './pages/NewsPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<HomePage />} />
         <Route path='/details/:id' element={<FilmDetailPage />} />
         <Route path='/contact' element={<ContactPage />} />
+        <Route path='/news' element={<NewsPage />} />
       </Routes>
       <Footer />
     </Box>
