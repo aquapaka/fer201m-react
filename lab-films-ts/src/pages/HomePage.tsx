@@ -1,4 +1,4 @@
-import { Container, Stack, Button, Box, Typography, Card, CardActionArea, CardMedia, CardContent } from '@mui/material'
+import { Box, Button, Container, Stack, Typography } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
 import FilmCard from '../components/FilmCard'
 import { Films } from '../shared/ListOfFilms'
