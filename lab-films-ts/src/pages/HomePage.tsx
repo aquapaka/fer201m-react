@@ -21,7 +21,7 @@ export default function HomePage() {
             </Stack>
             <Grid container spacing={4} mt={"30vh"} pb={"64px"} id="FilmList">
                 {Films.map(film => (
-                    <Grid xs={12} sm={6} md={4} sx={{
+                    <Grid key={film.id} xs={12} sm={6} md={4} sx={{
                         transition: 'all 300ms ease-in-out',
                         ':hover': {
                             scale: '105%',
