@@ -6,6 +6,7 @@ import FilmDetailPage from './pages/FilmDetailPage';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import NewsPage from './pages/NewsPage';
+import AboutPage from './pages/AboutPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/details/:id' element={<FilmDetailPage />} />
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/news' element={<NewsPage />} />
+        <Route path='/about' element={<AboutPage />} />
       </Routes>
       <Footer />
     </Box>
